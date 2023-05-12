@@ -40,7 +40,7 @@ if (!empty($_REQUEST['downhash'])) {
     $oldip = $user['ip'];
     $user['ip'] = getip();
     $CURUSER = $user;
-    $id = $_REQUEST['id'];
+    $id = (int)$_REQUEST['id'];
 } else {
     $id = (int)$_GET["id"];
     if (!$id)
