@@ -38,6 +38,7 @@ $conditions = apply_filter("role_query_conditions", $conditions, $_POST);
 if (empty($conditions)) {
     stderr("Error","No valid filter");
 }
+$_POST['duration'] = (int)$_POST['duration'];
 if ($isTypeTmpInvite && (empty($_POST['duration']) || $_POST['duration'] < 1)) {
     stderr("Error","Invalid duration");
 }
