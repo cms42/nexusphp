@@ -32,7 +32,7 @@ foreach ($langs as $row)
 }
 $s .= "\n</select>";
 ?>
-<form method="get" action="<?php echo $_SERVER['REQUEST_URI'] ?>">
+<form method="get" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']) ?>">
     <input type="hidden" name="secret" value="<?php echo $secret ?>">
 <?php
 print("<div align=\"right\">".$lang_login['text_select_lang']. $s . "</div>");
