@@ -111,10 +111,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             printf('%s：%s<br />%s %s', $lang_complains['text_added'], gettime($complain['added']), $lang_complains['text_new_email'], htmlspecialchars($complain['email']));
             if($isAdmin) {
                 if ($user) {
-                    printf(' [<a href="userdetails.php?id=%s" class="faqlink" target="_blank">%s</a>]', $user->id, $user->username);
-                    printf(' [<a href="user-ban-log.php?q=%s" class="faqlink" target="_blank">%s</a>]', urlencode($user->username), $lang_complains['text_view_band_log']);
+                    printf(' [<a href="userdetails.php?id=%s" class="faqlink" target="_blank" rel="noopener">%s</a>]', $user->id, $user->username);
+                    printf(' [<a href="user-ban-log.php?q=%s" class="faqlink" target="_blank" rel="noopener">%s</a>]', urlencode($user->username), $lang_complains['text_view_band_log']);
                 } else {
-                    printf(' [<a href="usersearch.php?em=%s" class="faqlink" target="_blank">%s</a>]', urlencode($complain['email']), $lang_complains['text_search_account']);
+                    printf(' [<a href="usersearch.php?em=%s" class="faqlink" target="_blank" rel="noopener">%s</a>]', urlencode($complain['email']), $lang_complains['text_search_account']);
                 }
                 printf('<br />IP: ' . htmlspecialchars($complain['ip']));
             }

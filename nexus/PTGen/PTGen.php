@@ -230,7 +230,7 @@ HTML;
     {
         $results = [];
         foreach (self::$validSites as $site => $info) {
-            $results[] = sprintf('<a href="%s" target="_blank" /><strong>%s</strong></a>', $info['home_page'], $site);
+            $results[] = sprintf('<a href="%s" target="_blank" rel="noopener" /><strong>%s</strong></a>', $info['home_page'], $site);
         }
         return implode(' / ', $results);
     }

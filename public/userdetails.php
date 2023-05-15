@@ -121,7 +121,7 @@ if ($CURUSER['id'] == $user['id'] || user_can('cruprfmanage'))
 <?php
 $userIdDisplay = $user['id'];
 $userManageSystemUrl = sprintf('%s/%s/users/%s',getSchemeAndHttpHost(), nexus_env('FILAMENT_PATH', 'nexusphp'), $user['id']);
-$userManageSystemText = sprintf('<a href="%s" target="_blank" class="altlink">%s</a>', $userManageSystemUrl, $lang_functions['text_management_system']);
+$userManageSystemText = sprintf('<a href="%s" target="_blank" rel="noopener" class="altlink">%s</a>', $userManageSystemUrl, $lang_functions['text_management_system']);
 $migratedHelp = sprintf($lang_userdetails['change_field_value_migrated'], $userManageSystemText);
 if (user_can('prfmanage') && $user["class"] < get_user_class()) {
     $userIdDisplay .= "&nbsp;[$userManageSystemText]";
@@ -390,11 +390,11 @@ tr_small($lang_userdetails['row_forum_posts'], ($forumposts && ($user["id"] == $
 if ($user["id"] == $CURUSER["id"] || user_can('viewhistory')) {
     if (\App\Models\HitAndRun::getIsEnabled()) {
         $hrStatus = (new \App\Repositories\HitAndRunRepository())->getStatusStats($user['id']);
-        tr_small('H&R', sprintf('<a href="myhr.php?userid=%s" target="_blank">%s</a>', $user['id'], $hrStatus), 1);
+        tr_small('H&R', sprintf('<a href="myhr.php?userid=%s" target="_blank" rel="noopener">%s</a>', $user['id'], $hrStatus), 1);
     }
     if (\App\Models\Claim::getConfigIsEnabled()) {
         $states = (new \App\Repositories\ClaimRepository())->getStats($user['id']);
-        tr_small($lang_functions['menu_claim'], sprintf('<a href="claim.php?uid=%s" target="_blank">%s</a>', $user['id'], $states), 1);
+        tr_small($lang_functions['menu_claim'], sprintf('<a href="claim.php?uid=%s" target="_blank" rel="noopener">%s</a>', $user['id'], $states), 1);
     }
     tr_small($lang_userdetails['row_karma_points'], number_format($user['seedbonus'], 1), 1);
     tr_small($lang_functions['text_seed_points'], number_format($user['seed_points'], 1) . "&nbsp;&nbsp;<span class='text-muted'>(" . nexus_trans('label.updated_at') . ": " . $user['seed_points_updated_at'] . ")</span>", 1);

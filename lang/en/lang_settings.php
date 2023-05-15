@@ -759,7 +759,7 @@ $lang_settings = array
     'submit_misc_settings' => 'Misc settings',
     'text_misc_settings_note' => 'Misc settings',
     'row_misc_donation_custom' => 'Donation custom',
-    'text_donation_custom_note' => 'Donation page custom content, displayed above Alipay, PayPal. Support&nbsp;<b><a href="tags.php" target="_blank">bbcode tag</a></b>',
+    'text_donation_custom_note' => 'Donation page custom content, displayed above Alipay, PayPal. Support&nbsp;<b><a href="tags.php" target="_blank" rel="noopener">bbcode tag</a></b>',
     'row_approval_status_icon_enabled' => 'Show approval status icon',
     'text_approval_status_icon_enabled_note' => "Whether to show the approval status icon in the torrent list, default: 'No'.",
     'row_approval_status_none_visible' => 'Visibility of not reviewed torrents',

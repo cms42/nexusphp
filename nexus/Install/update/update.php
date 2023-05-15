@@ -262,7 +262,7 @@ if (
     </div>
 </div>
 <div class="m-2 text-center">
-    Welcome to the NexusPHP updater, if you have any questions, click<a href="https://nexusphp.org/" target="_blank" class="text-blue-500 p-1">here</a>for help.
+    Welcome to the NexusPHP updater, if you have any questions, click<a href="https://nexusphp.org/" target="_blank" rel="noopener" class="text-blue-500 p-1">here</a>for help.
 </div>
 </body>
 <script>

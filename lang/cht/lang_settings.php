@@ -759,7 +759,7 @@ $lang_settings = array
     'submit_misc_settings' => '其他設定',
     'text_misc_settings_note' => '配置其他雜項。',
     'row_misc_donation_custom' => '捐贈自定義內容',
-    'text_donation_custom_note' => '捐贈頁自定義的內容，展示於支付寶、PayPal上面。支持&nbsp;<b><a href="tags.php" target="_blank">bbcode 標簽</a></b>',
+    'text_donation_custom_note' => '捐贈頁自定義的內容，展示於支付寶、PayPal上面。支持&nbsp;<b><a href="tags.php" target="_blank" rel="noopener">bbcode 標簽</a></b>',
     'row_approval_status_icon_enabled' => '顯示審核狀態圖標',
     'text_approval_status_icon_enabled_note' => "是否在種子列表展示審核狀態圖標，默認: '否'。",
     'row_approval_status_none_visible' => '未審核種子是否可見',

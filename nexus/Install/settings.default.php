@@ -410,7 +410,7 @@ return array (
     'mainversion' => 'NexusPHP',
     'subversion' => 'v1.6.0-beta6',
     'releasedate' => '2021-05-08',
-    'website' => '<a href="https://nexusphp.org" target="_blank">https://nexusphp.org</a>',
+    'website' => '<a href="https://nexusphp.org" target="_blank" rel="noopener">https://nexusphp.org</a>',
   ),
   'backup' =>
   array (

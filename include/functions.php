@@ -2668,7 +2668,7 @@ else {
                 <?php if($attendance){ printf(' <a href="attendance.php" class="">'.$lang_functions['text_attended'].'</a>', $attendance->points, $CURUSER['attendance_card']); }else{ printf(' <a href="attendance.php" class="faqlink">%s</a>', $lang_functions['text_attendance']);}?>
                 <a href="medal.php">[<?php echo nexus_trans('medal.label')?>]</a>
                 <font class = 'color_invite'><?php echo $lang_functions['text_invite'] ?></font>[<a href="invite.php?id=<?php echo $CURUSER['id']?>"><?php echo $lang_functions['text_send'] ?></a>]: <?php echo sprintf('%s(%s)', $CURUSER['invites'], \App\Models\Invite::query()->where('inviter', $CURUSER['id'])->where('invitee', '')->where('expired_at', '>', now())->count())?>
-                <?php if(get_user_class() >= \App\Models\User::CLASS_ADMINISTRATOR) printf('[<a href="%s" target="_blank">%s</a>]', nexus_env('FILAMENT_PATH', 'nexusphp'), $lang_functions['text_management_system'])?>
+                <?php if(get_user_class() >= \App\Models\User::CLASS_ADMINISTRATOR) printf('[<a href="%s" target="_blank" rel="noopener">%s</a>]', nexus_env('FILAMENT_PATH', 'nexusphp'), $lang_functions['text_management_system'])?>
                 <br />
 	            <font class="color_ratio"><?php echo $lang_functions['text_ratio'] ?></font> <?php echo $ratio?>
                 <font class='color_uploaded'><?php echo $lang_functions['text_uploaded'] ?></font> <?php echo mksize($CURUSER['uploaded'])?>
@@ -6410,7 +6410,7 @@ function torrent_name_for_admin(\App\Models\Torrent|null $torrent, $withTags = f
         return '';
     }
     $name = sprintf(
-        '<div class="text-primary-600 transition hover:underline hover:text-primary-500 focus:underline focus:text-primary-500"><a href="/details.php?id=%s" target="_blank" title="%s">%s</a></div>',
+        '<div class="text-primary-600 transition hover:underline hover:text-primary-500 focus:underline focus:text-primary-500"><a href="/details.php?id=%s" target="_blank" rel="noopener" title="%s">%s</a></div>',
         $torrent->id, $torrent->name, Str::limit($torrent->name, $length)
     );
     $tags = '';
